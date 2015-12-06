@@ -48,7 +48,7 @@ All is written, just read and apply it!
 
 X-XSS-Protection: 1; mode=block
 
-Enables [XSS filter)(http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-iv-the-xss-filter.aspx) in the modern Browser. As complement of Input control output encoding.
+Enables [XSS filter](http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-iv-the-xss-filter.aspx) in the modern Browser. As complement of Input control output encoding.
 
 Modify ServerWithXSS.groovy by adding this header to the http response.
 
@@ -79,7 +79,7 @@ Modify ServerWithXSS.groovy by adding this header to the http response.
 
   HTTP Headers can protect your web site against a threat. Important note, it's a security harness! Even with defensive http headerds, you have to apply security development best practices.
    
-  The holly bible [by OWASP... once again](https://www.owasp.org/index.php/List_of_useful_HTTP_headers]
+  The holly bible [by OWASP... once again](https://www.owasp.org/index.php/List_of_useful_HTTP_headers)
   
 ## Strict-Transport-Security
   Useful if your web site is full HTTPS (and a HTTP endpoint is still serve contents). Can be applied globally on HAProxy for example
@@ -104,6 +104,20 @@ Modify ServerWithXSS.groovy by adding this header to the http response.
 ## JSON Injection
 
  NoSQL Database likes MongoDB are not vulnerable to SQLi but JSon Injection, the input query language of these databases. A common attack is described [here](https://www.owasp.org/index.php/Testing_for_NoSQL_injection)
+ 
+# Mitigate the risk of new Exploit
+ 
+## INTRODUCTION
+Your application is build at the state of the art. All security best practices are well integrated by all devops people. By this way, you could sleep deeply.. or not?
+Your application is probably build on a technological stack. It can represent millions of locs. So even with the best dev practices you have hole, they are just not discovered yet.   
+  
+## Trace your stack
+
+## Look at new vulnerabilities 
+
+https://cve.mitre.org/
+    
+ 
  
  
   
