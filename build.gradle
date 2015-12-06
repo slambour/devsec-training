@@ -1,0 +1,49 @@
+subprojects {
+  apply plugin: 'java'
+  apply plugin: 'groovy'
+  apply plugin: 'maven'
+
+  //
+  // Repositories for dependency resolution
+  // For all subprojects
+  repositories {
+    mavenCentral()
+  }
+
+}
+
+project(':crypto') { group = 'cesi.crypto'
+  archivesBaseName = 'crypto'
+
+  sourceSets {
+    main {
+      groovy {
+        srcDirs 'src/main/java', 'src/main/groovy'
+      }
+    }
+  }
+
+  test {
+    testLogging {
+          events 'started', 'passed'
+    }
+  }
+
+  //
+  // Project dependencies
+  //
+  dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    // GROOVY DEPENDENCIES
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.2.1'
+
+
+    // UTILS
+    compile group: 'com.google.guava', name: 'guava', version: '16.0'
+
+    // CRYPTO DEPENDENCIES
+    compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.53'
+
+  }
+}
