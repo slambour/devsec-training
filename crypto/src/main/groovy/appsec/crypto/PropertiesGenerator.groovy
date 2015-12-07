@@ -25,7 +25,12 @@ class PropertiesGenerator {
   public static void main(String[] args) throws Exception {
     PropertiesGenerator propertiesGenerator = new PropertiesGenerator()
 
-    propertiesGenerator.generateFile("/home/lambour/Documents/ceci/td", "crypto.properties", "test")
+    List<String> students = ['dhautel', 'diverrez', 'gac', 'gauvin', 'leGoaziou', 'leRoy', 'letouze', 'legendre', 'rombauts', 'faltres', 'fontaine', 'grijol', 'hallegot', 'larnicol', 'raud', 'vanhouteghem', 'toullec', 'leMaitre', 'meunier', 'mauduigt']
+
+    for(String student : students) {
+      propertiesGenerator.generateFile("/home/lambour/Documents/ceci/sujets", "${student}.crypto.properties", student)
+    }
+
   }
   public void generateFile(String path, String fileName, String studentName) {
     BufferedWriter output = getFile(path, fileName)
