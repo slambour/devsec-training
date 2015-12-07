@@ -88,13 +88,11 @@ Modify ServerWithXSS.groovy by adding this header to the http response.
   
 ## XSS Protection 
   Blocks XSS in modern Browsers (sorry for legacy...). Can be applied globally on HAProxy too.
-   
-   
+      
 ## Content Security Policy 
   Mitigate the risk of cross-site scripting attacks by whitelisting trusted origins. Can be allied at app level or globally, it depends of your website features.
   More information provided by [OWASP](https://www.owasp.org/index.php/Content_Security_Policy)
-  
-    
+      
 # SQL Injection / Json Injection
 
 ## SQL Injection 
@@ -105,6 +103,10 @@ Modify ServerWithXSS.groovy by adding this header to the http response.
 
  NoSQL Database likes MongoDB are not vulnerable to SQLi but JSon Injection, the input query language of these databases. A common attack is described [here](https://www.owasp.org/index.php/Testing_for_NoSQL_injection)
  
+# Protect your data
+ 
+ Protect personal data with [transclucent databases](http://www.wayner.org/node/46)
+ 
 # Mitigate the risk of new Exploit
  
 ## INTRODUCTION
@@ -113,10 +115,13 @@ Your application is probably build on a technological stack. It can represent mi
   
 ## Trace your stack
 
+[OWASP Dependency-Check](https://www.owasp.org/index.php/OWASP_Dependency_Check) is you best friend
+
 ## Look at new vulnerabilities 
 
 https://cve.mitre.org/
     
+  
  
  
  

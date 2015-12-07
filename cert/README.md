@@ -55,8 +55,8 @@ You have once again to respond to the following questions. But this one it is fo
     openssl x509 -x509toreq -in certificate.crt -out CSR.csr -signkey privateKey.key
 
 # SIGN YOUR CERTIFICATE
-    Look at the documentation on a CA. For example you can have on look on [LetsEncrypt CA](https://letsencrypt.readthedocs.org/en/latest/) 
-   
+    Look at the documentation on a CA. For example you can have on look on [LetsEncrypt CA](https://letsencrypt.readthedocs.org/en/latest/)
+     
 
 # INSTALL IT INTO A REVERSE PROXY
 
